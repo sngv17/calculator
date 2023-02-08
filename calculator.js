@@ -45,6 +45,7 @@ btnequal.onclick = function() {
         }
     }
 }*/
+/*
 var input =ducument.getElementById('fname');
 var number=ducument.getElementById('')
 var resultdisplayed=false;
@@ -75,4 +76,43 @@ for(var i=0;i<operator.length();i++)
 //clearing the input box
 clear.addEventListener("click",function(){
     input.innerHTML="";
-})
+})*/
+var mainstring=document.getElementById("fname").value;
+var buttonlist=document.querySelectorAll(".btn");
+var i;
+for (i = 0; i < buttonlist.length; i++) {
+    buttonlist[i].addEventListener("click",function(e){
+        document.getElementById("fname").value+=e.target.innerHTML;
+    })
+  }
+  var cal = document.getElementsByClassName("bigconatiner");
+  cal.onkeyup = function (event) {
+      if (event.keyCode === 13) {
+          console.log("Enter");
+          let x = document.getElementById("result").value
+          console.log(x);
+          solve();
+      }
+  }
+  function solve()
+  {
+    let x = document.getElementById("fname").value
+    let y = math.evaluate(x)
+    document.getElementById("fname").value = y
+  }
+  function clr()
+  {
+    document.getElementById("fname").value = "";
+  }
+
+
+
+
+  /*
+   innerHTML=== <p>Shreya bansal</p>
+   Shreya bansal==innerhtml of p tag
+   <p></p>==element node
+   shreya bansal==textnode
+
+  */
+

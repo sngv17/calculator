@@ -15,6 +15,15 @@ body{
 
     
 }
+.btnnn{
+    background-color: rgb(138, 129, 224);
+    font-size: 45px;
+    width: 60px;
+    margin-top:6px;
+    border :none;
+    border-radius: 7px;
+
+}
 .container{
     background-color: rgb(115, 202, 239);
     text-align: center;
